@@ -31,7 +31,7 @@ jobs:
           ./mvnw -B verify
       - name: Publicar reportes
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: reportes-pruebas
           path: |
@@ -144,7 +144,7 @@ jobs:
         env:
           DB_PASSWORD: x
           DB_ROOT_PASSWORD: x
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: logs-despliegue
