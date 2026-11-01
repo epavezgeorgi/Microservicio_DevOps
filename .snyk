@@ -1,0 +1,11 @@
+# Política de Snyk: excepciones de seguridad documentadas y con fecha de vencimiento
+version: v1.25.0
+ignore:
+  SNYK-JAVA-ORGGLASSFISHJAXB-20883142:
+    - '*':
+        reason: >-
+          No existe versión corregida. JAXB solo lo usa Hibernate internamente para leer
+          sus mapeos XML; la API no recibe ni procesa XML de usuarios (solo JSON).
+          Se revisará cuando haya parche disponible.
+        expires: 2027-01-31T00:00:00.000Z
+patch: {}
