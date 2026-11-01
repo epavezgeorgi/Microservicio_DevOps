@@ -1,5 +1,5 @@
 # ---------- Etapa 1: compilación con Maven ----------
-FROM maven:3.9-eclipse-temurin-21 AS build
+FROM maven:3.9-eclipse-temurin-26 AS build
 WORKDIR /build
 # Primero solo el pom para aprovechar la caché de dependencias
 COPY pom.xml lombok.config ./
