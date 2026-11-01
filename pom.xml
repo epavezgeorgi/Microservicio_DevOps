@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>4.0.8</version>
+		<version>4.0.9</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.hackerfinder.backend</groupId>
@@ -29,6 +29,7 @@
 	<properties>
 		<java.version>21</java.version>
 		<jacoco.version>0.8.13</jacoco.version>
+		<jackson-bom.version>3.1.8</jackson-bom.version>
 	</properties>
 	<dependencies>
 			<dependency>
@@ -77,10 +78,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
 		</dependency>
 	</dependencies>
 
