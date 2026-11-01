@@ -85,7 +85,7 @@ jobs:
             --label org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }} \
             -t usuarios-api:${{ github.sha }} .
       - name: Escanear imagen con Trivy (bloquea si hay CRITICAL/HIGH)
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@v0.36.0
         with:
           image-ref: usuarios-api:${{ github.sha }}
           severity: CRITICAL,HIGH
