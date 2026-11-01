@@ -58,16 +58,15 @@ jobs:
             echo "::error::Falta el secret SNYK_TOKEN (Settings > Secrets and variables > Actions)"
             exit 1
           fi
-      - uses: snyk/actions/setup@master
-      - name: Snyk - dependencias (SCA)
-        run: snyk test --file=pom.xml --severity-threshold=high
-      - name: Snyk - código fuente (SAST)
-        run: snyk code test --severity-threshold=high
       - name: Preparar Maven (permisos y dependencias)
         run: |
           chmod +x mvnw
           ./mvnw -B -q dependency:resolve
       - uses: snyk/actions/setup@master
+      - name: Snyk - dependencias (SCA)
+        run: snyk test --file=pom.xml --severity-threshold=high
+      - name: Snyk - código fuente (SAST)
+        run: snyk code test --severity-threshold=high
 
   # 3) Construcción de la imagen Docker + escaneo con Trivy + publicación en GHCR
   build:
