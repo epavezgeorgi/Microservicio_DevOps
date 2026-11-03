@@ -9,7 +9,7 @@ COPY src ./src
 RUN mvn -B -q package -DskipTests
 
 # ---------- Etapa 2: imagen final liviana (solo JRE) ----------
-FROM eclipse-temurin:21-jre-alpine
+FROM eclipse-temurin:24-jre-alpine
 LABEL org.opencontainers.image.title="usuarios-api" \
       org.opencontainers.image.description="Microservicio de Usuarios HackerFinder - EP2 DOY0101"
 
